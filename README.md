@@ -77,20 +77,20 @@ Here is an example config file.
 * SecureLogger(String secret, String loggingPath) Constructor: The Constructor has the secret of the log-file and the path of the log-file, which you want to generate or verify, as input parameters.
 
 ```
-    SecureLogger secureLogger = new SecureLogger("testSecret", "/Users/testUser/Desktop/test.log");
+	SecureLogger secureLogger = new SecureLogger("testSecret", "/Users/testUser/Desktop/test.log");
 ```
 
 * void secureLog(LogLevel logLevel, String userId, String activity, String activityDetail) Method: This method is for logging. It logs the input parameters into the specified log-file.
 
 ```
-		secureLogger.secureLog(LogLevel.TRACE, "testUser", "DELETE", "deleted XY");
-		secureLogger.secureLog(LogLevel.FATAL, "testUser1", "INSERT", "inserted XY");
+	secureLogger.secureLog(LogLevel.TRACE, "testUser", "DELETE", "deleted XY");
+	secureLogger.secureLog(LogLevel.FATAL, "testUser1", "INSERT", "inserted XY");
 ```
 
 * boolean verifyLog() Method: This method checks wheter the logs in a file were altered or not. If the file is not altered it returns "true", otherwise it returns "false".
 
 ```
-		boolean isValid = secureLogger.verifyLog();	
+	boolean isValid = secureLogger.verifyLog();	
 ```
 
 ## Built With
